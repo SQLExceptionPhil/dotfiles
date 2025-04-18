@@ -3,8 +3,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export LC_CTYPE="en_US.UTF-8"
-export ZSH="/Users/phil/.oh-my-zsh"
-export JAVA_HOME="/Users/phil/Library/Java/JavaVirtualMachines/adopt-openjdk-16.0.1/Contents/Home/"
+export ZSH="/Users/$USER/.oh-my-zsh"
+export JAVA_HOME="/Users/$USER/Library/Java/JavaVirtualMachines/adopt-openjdk-16.0.1/Contents/Home/"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="/Users/phil/.bin:/opt/homebrew/opt/node@12/bin:/Users/phil/go/bin:$PATH"
+export PATH="/Users/$USER/.bin:/opt/homebrew/opt/node@12/bin:/Users/$USER/go/bin:$PATH"
 export HOMEBREW_NO_ENV_HINTS="1"
 
 [ -f "$HOME/.zsh_work" ] && source "$HOME/.zsh_work"
@@ -32,21 +32,18 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/phil/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("/Users/$USER/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/phil/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/phil/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/$USER/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/$USER/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/phil/miniconda3/bin:$PATH"
+        export PATH="/Users/$USER/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# bun completions
-[ -s "/Users/phil/.oh-my-zsh/completions/_bun" ] && source "/Users/phil/.oh-my-zsh/completions/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -64,4 +61,4 @@ alias vi="nvim"
 alias vim="nvim"
 
 # Added by Windsurf
-export PATH="/Users/phil/.codeium/windsurf/bin:$PATH"
+export PATH="/Users/$USER/.codeium/windsurf/bin:$PATH"

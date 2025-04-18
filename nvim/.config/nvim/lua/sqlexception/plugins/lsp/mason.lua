@@ -51,6 +51,7 @@ return {
 				"eslint_d",
 				"golangci-lint",
 				"templ",
+				"goimports",
 			},
 		})
 	end,

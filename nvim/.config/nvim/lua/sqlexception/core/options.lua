@@ -26,8 +26,10 @@ opt.signcolumn = "yes"
 opt.backspace = "indent,eol,start"
 
 -- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard
+opt.clipboard = "unnamedplus" -- use system clipboard
 
 -- split
 opt.splitright = true
 opt.splitbelow = true
+
+opt.so = 4

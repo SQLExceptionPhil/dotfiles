@@ -11,6 +11,9 @@ return {
 				"codedark",
 			},
 			livePreview = true,
+			-- globalAfter = [[
+			--      require("lualine").refresh()
+			--    ]],
 		})
 	end,
 }

@@ -42,8 +42,6 @@ brew "lazygit"
 brew "llama.cpp"
 # Utility for directing compilation
 brew "make"
-# Drop-in replacement for MySQL
-brew "mariadb"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Utility for managing network connections

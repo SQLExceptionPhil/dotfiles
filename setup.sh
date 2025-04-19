@@ -13,4 +13,5 @@ fi
 
 brew bundle --file=~/dotfiles/Brewfile
 
-stow .
+stow zsh
+stow nvim

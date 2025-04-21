@@ -23,3 +23,14 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if [[ $TERM != "linux" && $TERM_PROGRAM != "vscode" && -z "$TMUX" ]]; then
+  # Auto attach to tmux session
+  if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    # Only attach if not inside tmux already
+    if tmux has-session -t main 2>/dev/null; then
+      tmux attach-session -t main
+    else
+      tmux new-session -s main
+    fi
+  fi
+fi

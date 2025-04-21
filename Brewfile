@@ -60,6 +60,12 @@ brew "stow"
 brew "telnet"
 # Simplified and community-driven man pages
 brew "tldr"
+# Terminal multiplexer
+brew "tmux"
+# Shell completion for Tmuxinator
+brew "tmuxinator-completion"
+# Manage complex tmux sessions easily
+brew "tmuxinator"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust

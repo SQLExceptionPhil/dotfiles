@@ -21,6 +21,14 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				go = { "goimports", "gofmt" },
+				templ = { "templ" },
+			},
+			formatters = {
+				templ = {
+					command = "templ",
+					args = { "fmt" },
+					stdin = true,
+				},
 			},
 			format_on_save = {
 				lsp_fallback = true,

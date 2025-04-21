@@ -9,3 +9,6 @@ alias cls="clear"
 alias vi="nvim"
 alias vim="nvim"
 alias lg="lazygit"
+stowit() {
+  (cd ~/dotfiles && stow "$@")
+}

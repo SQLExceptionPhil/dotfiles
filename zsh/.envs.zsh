@@ -1,3 +1,4 @@
+export EDITOR="nvim"
 export HOMEBREW_NO_ENV_HINTS="1"
 
 # bun

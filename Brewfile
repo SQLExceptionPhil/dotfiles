@@ -10,6 +10,8 @@ brew "apr-util"
 brew "argocd"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -22,6 +24,8 @@ brew "go"
 brew "gradle"
 # Fulltext search engine and column store
 brew "groonga"
+# Improved top (interactive process viewer)
+brew "htop"
 # Apache HTTP server
 brew "httpd"
 # Website copier/offline browser
@@ -50,6 +54,8 @@ brew "netcat"
 brew "nmap"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Search tool like grep and The Silver Searcher
@@ -82,6 +88,10 @@ brew "hashicorp/tap/packer"
 cask "bentobox"
 # Workflow and Decision Automation Platform
 cask "camunda-modeler"
+# Clipboard manager with advanced features
+cask "copyq"
+# Web browser
+cask "google-chrome"
 # Keyboard customiser
 cask "karabiner-elements"
 # Smooths scrolling and set mouse scroll directions independently

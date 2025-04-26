@@ -16,3 +16,4 @@ brew bundle --file=~/dotfiles/Brewfile
 stow zsh
 stow nvim
 stow tmux
+stow ghostty

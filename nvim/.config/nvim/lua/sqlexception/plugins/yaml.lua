@@ -14,19 +14,27 @@ return {
 		},
 	},
 	{
-		{
-			"someone-stole-my-name/yaml-companion.nvim",
-			dependencies = {
-				{ "neovim/nvim-lspconfig" },
-				{ "nvim-lua/plenary.nvim" },
-				{ "nvim-telescope/telescope.nvim" },
-			},
-			config = function()
-				require("telescope").load_extension("yaml_schema")
-			end,
-			keys = {
-				{ "<leader>ys", ":Telescope yaml_schema<CR>", desc = "Change yaml_schema" },
-			},
+		"cwrau/yaml-schema-detect.nvim",
+		config = true,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
 		},
+		ft = { "yaml" },
 	},
+	-- {
+	-- 	{
+	-- 		"someone-stole-my-name/yaml-companion.nvim",
+	-- 		dependencies = {
+	-- 			{ "neovim/nvim-lspconfig" },
+	-- 			{ "nvim-lua/plenary.nvim" },
+	-- 			{ "nvim-telescope/telescope.nvim" },
+	-- 		},
+	-- 		config = function()
+	-- 			require("telescope").load_extension("yaml_schema")
+	-- 		end,
+	-- 		keys = {
+	-- 			{ "<leader>ys", ":Telescope yaml_schema<CR>", desc = "Change yaml_schema" },
+	-- 		},
+	-- 	},
+	-- },
 }

@@ -16,3 +16,11 @@ Then run the setup script
 cd dotfiles
 ./setup.sh
 ```
+
+# Notes
+
+Turn off `select the previous input source` in mac settings
+
+Disable macOS’s “Select the previous input source” shortcut
+•  → System Settings → Keyboard → Shortcuts → Input Sources
+• Uncheck “Select the previous input source” (or remap it to something else).

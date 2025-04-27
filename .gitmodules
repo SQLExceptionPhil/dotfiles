@@ -9,4 +9,7 @@
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
+  url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/.tmux/plugins/tmux-fzf-pane-switch"]
+	path = tmux/.tmux/plugins/tmux-fzf-pane-switch
+	url = https://github.com/Kristijan/tmux-fzf-pane-switch

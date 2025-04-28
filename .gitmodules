@@ -13,3 +13,30 @@
 [submodule "tmux/.tmux/plugins/tmux-fzf-pane-switch"]
 	path = tmux/.tmux/plugins/tmux-fzf-pane-switch
 	url = https://github.com/Kristijan/tmux-fzf-pane-switch
+
+[submodule "tmux/.tmux/plugins/vim-tmux-navigator"]
+    path = tmux/.tmux/plugins/vim-tmux-navigator
+    url = https://github.com/christoomey/vim-tmux-navigator
+
+[submodule "tmux/.tmux/plugins/tmux-themepack"]
+    path = tmux/.tmux/plugins/tmux-themepack
+    url = https://github.com/jimeh/tmux-themepack
+
+[submodule "tmux/.tmux/plugins/tmux-resurrect"]
+    path = tmux/.tmux/plugins/tmux-resurrect
+    url = https://github.com/tmux-plugins/tmux-resurrect
+
+[submodule "tmux/.tmux/plugins/tmux-continuum"]
+    path = tmux/.tmux/plugins/tmux-continuum
+    url = https://github.com/tmux-plugins/tmux-continuum
+
+[submodule "tmux/.tmux/plugins/tmux-fzf"]
+    path = tmux/.tmux/plugins/tmux-fzf
+    url = https://github.com/sainnhe/tmux-fzf
+
+[submodule "tmux/.tmux/plugins/catppuccin-tmux"]
+    path = tmux/.tmux/plugins/catppuccin-tmux
+    url = https://github.com/dreamsofcode-io/catppuccin-tmux
+[submodule "https://github.com/catppuccin/tmux.git"]
+	path = tmux/.tmux/plugins/tmux
+	url = https://github.com/catppuccin/tmux.git

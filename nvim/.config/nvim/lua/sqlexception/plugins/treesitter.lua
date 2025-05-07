@@ -49,6 +49,8 @@ return {
 				"gotmpl",
 				"gowork",
 				"templ",
+				-- java
+				"java",
 			},
 			incremental_selection = {
 				enable = true,

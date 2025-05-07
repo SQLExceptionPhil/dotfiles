@@ -7,15 +7,6 @@ return {
 		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
-		-- import lspconfig plugin
-		local lspconfig = require("lspconfig")
-
-		-- import mason_lspconfig plugin
-		local mason_lspconfig = require("mason-lspconfig")
-
-		-- import cmp-nvim-lsp plugin
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
 		local keymap = vim.keymap -- for conciseness
 
 		vim.api.nvim_create_autocmd("LspAttach", {
@@ -67,9 +58,6 @@ return {
 			end,
 		})
 
-		-- used to enable autocompletion (assign to every lsp server config)
-		local capabilities = cmp_nvim_lsp.default_capabilities()
-
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
@@ -79,120 +67,5 @@ return {
 		end
 
 		vim.filetype.add({ extension = { templ = "templ" } })
-
-		mason_lspconfig.setup_handlers({
-			-- default handler for installed servers
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["svelte"] = function()
-				-- configure svelte server
-				lspconfig["svelte"].setup({
-					capabilities = capabilities,
-					on_attach = function(client, bufnr)
-						vim.api.nvim_create_autocmd("BufWritePost", {
-							pattern = { "*.js", "*.ts" },
-							callback = function(ctx)
-								-- Here use ctx.match instead of ctx.file
-								client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-							end,
-						})
-					end,
-				})
-			end,
-			["emmet_ls"] = function()
-				-- configure emmet language server
-				lspconfig["emmet_ls"].setup({
-					capabilities = capabilities,
-					filetypes = {
-						"html",
-						"typescriptreact",
-						"javascriptreact",
-						"css",
-						"sass",
-						"scss",
-						"less",
-						"svelte",
-					},
-				})
-			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
-					},
-				})
-			end,
-			["gopls"] = function()
-				lspconfig["gopls"].setup({
-					settings = {
-						gopls = {
-							analyses = {
-								unusedparams = true,
-							},
-							staticcheck = true,
-							gofumpt = true,
-						},
-					},
-				})
-			end,
-			["templ"] = function()
-				lspconfig["templ"].setup({
-					capabilities = capabilities,
-					filetypes = { "templ" },
-				})
-			end,
-			["tailwindcss"] = function()
-				lspconfig["tailwindcss"].setup({
-					capabilities = capabilities,
-					filetypes = { "templ", "astro", "javascript", "typescript", "react" },
-					settings = {
-						tailwindCSS = {
-							includeLanguages = {
-								templ = "html",
-							},
-						},
-					},
-				})
-			end,
-			["html"] = function()
-				lspconfig["html"].setup({
-					capabilities = capabilities,
-					filetypes = { "html", "templ" },
-				})
-			end,
-			["yamlls"] = function()
-				lspconfig["yamlls"].setup({
-					capabilities = capabilities,
-					filetypes = { "yaml", "yml" },
-					-- settings = {
-					-- 	yaml = {
-					-- 		schemas = {
-					-- 			["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
-					-- 			["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-					-- 			["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/**/*.{yml,yaml}",
-					-- 			["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
-					-- 			["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
-					-- 			["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
-					-- 			["http://json.schemastore.org/circleciconfig"] = ".circleci/**/*.{yml,yaml}",
-					-- 			["https://raw.githubusercontent.com/SchemaStore/schemastore/refs/heads/master/src/schemas/json/kubernetes-definitions.json"] = "k8s/**/*.{yml,yaml}",
-					-- 		},
-					-- 	},
-					-- },
-				})
-			end,
-		})
 	end,
 }

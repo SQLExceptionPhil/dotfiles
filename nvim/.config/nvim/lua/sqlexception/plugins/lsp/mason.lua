@@ -1,7 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		version = "1.11.0",
+		version = "2.0.0",
 		dependencies = {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
@@ -63,7 +63,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		version = "1.32.0",
+		version = "2.0.0",
 		dependencies = {
 			"williamboman/mason.nvim",
 		},

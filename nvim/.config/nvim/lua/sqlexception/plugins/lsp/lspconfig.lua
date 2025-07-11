@@ -78,6 +78,19 @@ return {
 
 		vim.filetype.add({ extension = { templ = "templ" } })
 
+		vim.lsp.config("eslint", {
+			settings = {
+				eslint = {
+					autoFixOnSave = true,
+					experimental = {
+						useFlatConfig = true,
+					},
+					format = {
+						enable = true,
+					},
+				},
+			},
+		})
 		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {

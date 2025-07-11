@@ -12,6 +12,7 @@ return {
 			-- import mason-lspconfig
 			local mason_lspconfig = require("mason-lspconfig")
 
+			-- import mason-tool-installer
 			local mason_tool_installer = require("mason-tool-installer")
 
 			-- enable mason and configure icons
@@ -27,7 +28,6 @@ return {
 
 			mason_lspconfig.setup({
 				automatic_installation = {},
-				-- list of servers for mason to install
 				ensure_installed = {
 					"html",
 					"cssls",
@@ -43,6 +43,7 @@ return {
 					"templ",
 					"yamlls",
 					"jdtls",
+					"eslint",
 				},
 			})
 
@@ -53,7 +54,7 @@ return {
 					"isort", -- python formatter
 					"black", -- python formatter
 					"pylint",
-					"eslint_d",
+					-- "eslint_d",
 					"golangci-lint",
 					"templ",
 					"goimports",

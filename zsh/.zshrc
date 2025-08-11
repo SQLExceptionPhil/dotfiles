@@ -37,3 +37,6 @@ fi
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/mc mc
+
+# Added by Windsurf
+export PATH="/Users/phil/.codeium/windsurf/bin:$PATH"

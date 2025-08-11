@@ -9,7 +9,7 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
 export ZSH="/Users/$USER/.oh-my-zsh"
 
 export NVM_DIR="$HOME/.nvm"
-export PATH="/opt/homebrew/opt/dotnet@8/bin:/opt/homebrew/opt/openjdk@21/bin:/Users/$USER/.codeium/windsurf/bin:$BUN_INSTALL/bin:/Users/$USER/.bin:/opt/homebrew/opt/node@12/bin:/Users/$USER/go/bin:$PATH"
+export PATH="/Users/phil/.local/bin:/opt/homebrew/opt/dotnet@8/bin:/opt/homebrew/opt/openjdk@21/bin:/Users/$USER/.codeium/windsurf/bin:$BUN_INSTALL/bin:/Users/$USER/.bin:/opt/homebrew/opt/node@12/bin:/Users/$USER/go/bin:$PATH"
 
 auto_source_dot_envs() {
   local envs_dir=".envs" # Define the directory name we're looking for

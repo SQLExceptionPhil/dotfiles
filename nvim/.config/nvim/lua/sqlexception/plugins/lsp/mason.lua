@@ -42,6 +42,7 @@ return {
 					"gopls",
 					"templ",
 					"yamlls",
+					"ruff", -- python formatter/linter/lsp
 					"jdtls",
 					"eslint",
 				},
@@ -51,10 +52,7 @@ return {
 				ensure_installed = {
 					"prettier", -- prettier formatter
 					"stylua", -- lua formatter
-					"isort", -- python formatter
-					"black", -- python formatter
 					"pylint",
-					-- "eslint_d",
 					"golangci-lint",
 					"templ",
 					"goimports",

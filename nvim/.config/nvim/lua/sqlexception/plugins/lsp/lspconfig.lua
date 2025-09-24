@@ -124,6 +124,19 @@ return {
 				},
 			},
 		})
+		vim.lsp.config("pyright", {
+			settings = {
+				pyright = {
+					-- using Ruffs import organizer
+					disableOrganizeImports = true,
+				},
+				-- python = {
+				-- 	analysis = {
+				-- 		ignore = { "*" },
+				-- 	},
+				-- },
+			},
+		})
 		vim.lsp.config("jdtls", {
 			settings = {
 				-- java.jdt.ls.java.home

@@ -1,0 +1,54 @@
+{
+  "vim.leader": "<space>",
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<leader>", "n", "h"], "after": [":", "n", "o", "h", "<enter>"] },
+
+    { "before": ["<leader>", "w", "w"], "commands": ["workbench.action.files.save"] },
+    { "before": ["<leader>", "w", "q"], "commands": [
+      "workbench.action.files.save",
+      "workbench.action.closeActiveEditor"
+    ] },
+
+    { "before": ["<leader>", "s", "v"], "commands": ["workbench.action.splitEditorRight"] },
+    { "before": ["<leader>", "s", "h"], "commands": ["workbench.action.splitEditorDown"] },
+    { "before": ["<leader>", "s", "e"], "commands": ["workbench.action.evenEditorWidths"] },
+    { "before": ["<leader>", "s", "x"], "commands": ["workbench.action.closeActiveEditor"] },
+
+    { "before": ["<leader>", "t", "o"], "commands": ["workbench.action.files.newUntitledFile"] },
+    { "before": ["<leader>", "t", "x"], "commands": ["workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "t", "n"], "commands": ["workbench.action.nextEditor"] },
+    { "before": ["<leader>", "t", "p"], "commands": ["workbench.action.previousEditor"] },
+    { "before": ["<leader>", "t", "f"], "commands": ["workbench.action.duplicateActiveEditor"] },
+
+    { "before": ["<leader>", "e", "e"], "commands": ["workbench.action.toggleSidebarVisibility"] },
+    { "before": ["<leader>", "e", "f"], "commands": ["workbench.files.action.showActiveFileInExplorer"] },
+    { "before": ["<leader>", "e", "c"], "commands": ["workbench.files.action.collapseExplorerFolders"] },
+    { "before": ["<leader>", "e", "r"], "commands": ["workbench.files.action.refreshFilesExplorer"] },
+
+    { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["<leader>", "f", "r"], "commands": ["workbench.action.openRecent"] },
+    { "before": ["<leader>", "f", "s"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "f", "c"], "commands": ["workbench.action.findInFiles"] },
+    { "before": ["<leader>", "f", "t"], "commands": ["workbench.action.findInFiles"] },
+
+    { "before": ["g", "R"], "commands": ["editor.action.referenceSearch.trigger"] },
+    { "before": ["g", "D"], "commands": ["editor.action.goToDeclaration"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["g", "t"], "commands": ["editor.action.goToTypeDefinition"] },
+
+    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.codeAction"] },
+    { "before": ["<leader>", "r", "n"], "commands": ["editor.action.rename"] },
+    { "before": ["<leader>", "D"], "commands": ["workbench.action.problems.focus"] },
+    { "before": ["<leader>", "d"], "commands": ["editor.action.showHover"] },
+    { "before": ["K"], "commands": ["editor.action.showHover"] },
+
+    { "before": ["<leader>", "m", "p"], "commands": ["editor.action.formatDocument"] },
+    { "before": ["<leader>", "l"], "commands": ["workbench.action.problems.focus"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["<leader>", "c", "a"], "commands": ["editor.action.codeAction"] },
+    { "before": ["<leader>", "m", "p"], "commands": ["editor.action.formatSelection"] }
+  ]
+}
